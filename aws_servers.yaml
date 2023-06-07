@@ -1,0 +1,40 @@
+Resources:
+  EC2Instance1:
+    Properties:
+      ImageId: ami-12345678
+      InstanceType: t2.micro
+      SecurityGroups:
+        - default
+      Tags:
+        - Key: Name
+          Value: Instance1
+    Type: AWS::EC2::Instance
+  EC2Instance2:
+    Properties:
+      ImageId: ami-12345678
+      InstanceType: t2.micro
+      SecurityGroups:
+        - default
+      Tags:
+        - Key: Name
+          Value: Instance2
+    Type: AWS::EC2::Instance
+  EC2Instance3:
+    Properties:
+      ImageId: ami-12345678
+      InstanceType: t2.micro
+      SecurityGroups:
+        - default
+      Tags:
+        - Key: Name
+          Value: Instance3
+    Type: AWS::EC2::Instance
+  EC2SecurityGroup:
+    Properties:
+      GroupDescription: Allow SSH traffic
+      SecurityGroupIngress:
+        - CidrIp: '0.0.0.0/0'
+          FromPort: '22'
+          IpProtocol: tcp
+          ToPort: '22'
+    Type: AWS::EC2::SecurityGroup
