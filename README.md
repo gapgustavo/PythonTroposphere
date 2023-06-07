@@ -7,14 +7,29 @@ troposphere library installed (pip install troposphere)
 
 ## Usage
 Clone or download the script from the repository.
-Install the required dependencies by running pip install troposphere.
+
+Install the required dependencies by running:
+```bash
+pip install requirements.txt
+```
+
 Open the script file and modify the following parameters according to your requirements:
-ImageId: Replace with the desired Amazon Machine Image (AMI) ID.
-InstanceType: Replace with the desired instance type.
-SecurityGroups: Replace with the desired security group.
+
+    ImageId: Replace with the desired Amazon Machine Image (AMI) ID.
+
+    InstanceType: Replace with the desired instance type.
+
+    SecurityGroups: Replace with the desired security group.
+
 Save the changes.
-Run the script using python script_name.py.
+
+Run the script.
+```bash
+python main.py
+```
+
 The script will generate a file named aws_servers.yaml.
+
 Use the generated aws_servers.yaml file with AWS CloudFormation to create the servers in your AWS account.
 
 ## Important Notes
